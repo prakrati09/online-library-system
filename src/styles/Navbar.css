@@ -1,0 +1,55 @@
+/* Navbar container styles */
+.navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1e1e1e; /* Lighter dark background */
+    color: #f5f5f5; /* Light text color */
+    padding: 20px;
+}
+
+.navbar h1 {
+    font-size: 2.5em;
+    margin-bottom: 15px;
+    color: #00d9a7; /* Bright accent color for title */
+    text-transform: uppercase; /* Uppercase for emphasis */
+    letter-spacing: 1px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 25px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #f5f5f5; /* Light color for links */
+    font-size: 1.2em;
+    padding: 10px 15px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s, color 0.3s;
+    position: relative; /* Position for hover effect */
+}
+
+.navbar a::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -4px; /* Adjust for spacing */
+    width: 0%;
+    height: 2px;
+    background-color: #00d9a7; /* Accent color underline */
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.navbar a:hover {
+    background-color: #00d9a7; /* Accent background on hover */
+    color: #121212; /* Dark text on hover */
+}
+
+.navbar a:hover::after {
+    width: 100%; /* Underline effect on hover */
+    left: 0; /* Move to the left */
+}

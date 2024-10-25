@@ -1,0 +1,121 @@
+/* Main Book Details container */
+.book-details {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #ffffff; /* Light background */
+    border-left: 6px solid #00796b; /* Softer accent color for the left border */
+    border-radius: 20px; /* Smooth rounded corners */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08); /* Soft shadow for depth */
+    font-family: 'Poppins', sans-serif; /* Clean modern font */
+    color: #333333; /* Darker text for contrast */
+    position: relative; /* Position for decorative elements */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Add subtle lift effect */
+.book-details:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12); /* Stronger shadow on hover */
+}
+
+/* Decorative floating circle */
+.book-details::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    right: -30px;
+    width: 80px;
+    height: 80px;
+    background-color: rgba(0, 121, 107, 0.1); /* Transparent teal circle */
+    border-radius: 50%;
+    z-index: -1; /* Positioned behind the content */
+}
+
+/* Another floating geometric shape */
+.book-details::after {
+    content: '';
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 120px;
+    height: 120px;
+    background-color: rgba(46, 204, 113, 0.08); /* Transparent green square */
+    transform: rotate(45deg); /* Rotate to create a diamond shape */
+    z-index: -1;
+}
+
+/* Book title styles */
+.book-title {
+    font-size: 2.5em;
+    color: #00796b; /* Softer accent color for the title */
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-bottom: 2px solid #00796b; /* Underline effect with accent color */
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+/* Book details */
+.book-author,
+.book-category,
+.book-description,
+.book-rating {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    color: #555555; /* Subtle text color for readability */
+}
+
+.book-author strong,
+.book-category strong,
+.book-description strong,
+.book-rating strong {
+    color: #00796b; /* Softer accent color for labels */
+    font-weight: bold;
+}
+
+/* Back button styles */
+.back-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #e74c3c; /* Keep warm red for attention */
+    color: #ffffff;
+    border: none;
+    border-radius: 50px; /* Fully rounded */
+    font-size: 1.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 5px 15px rgba(231, 76, 60, 0.2); /* Shadow for button */
+}
+
+/* Back button hover effect */
+.back-button:hover {
+    background-color: #c0392b; /* Darker red */
+    transform: translateY(-3px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .book-details {
+        padding: 25px; /* Adjust padding for small screens */
+    }
+
+    .book-title {
+        font-size: 2em; /* Adjust title size */
+    }
+
+    .book-author,
+    .book-category,
+    .book-description,
+    .book-rating {
+        font-size: 1em; /* Adjust detail font size */
+    }
+
+    .back-button {
+        font-size: 1em;
+        padding: 10px 20px; /* Adjust button size */
+    }
+}

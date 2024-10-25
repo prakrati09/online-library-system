@@ -1,0 +1,118 @@
+/* Main Book List container */
+.book-list {
+    padding: 40px; /* Padding inside the container */
+    margin: 0 auto; /* Center the container */
+    font-family: 'Poppins', sans-serif; /* Change to Poppins for consistency */
+    color: #333333; /* Darker gray text color for better contrast */
+    background-color: #f0f4f4; /* Very light teal background */
+}
+
+/* Heading styles */
+.book-list h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: #00796b; /* Softer accent color */
+    text-align: center;
+    margin-bottom: 30px;
+    text-transform: uppercase; /* Capitalize the text */
+}
+
+/* Category section */
+.category-list h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #00796b; /* Softer accent color */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.category-list ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    list-style: none;
+    flex-wrap: wrap; /* Wrap items on smaller screens */
+}
+
+.category-list li {
+    background-color: #e0f2f1; /* Light teal background */
+    padding: 12px 18px;
+    border-radius: 50px; /* Circular pills */
+    transition: all 0.3s ease;
+}
+
+.category-list li:hover {
+    background-color: #00796b; /* Hover to a softer accent color */
+    color: #ffffff; /* White text on hover */
+    transform: translateY(-4px); /* Slight lift on hover */
+}
+
+.category-list a {
+    text-decoration: none;
+    color: inherit; /* Inherit color */
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+/* Popular books section */
+.popular-books h2 {
+    font-size: 2em;
+    color: #e74c3c; /* Keep warm red for consistency */
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.popular-books ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    list-style: none;
+    padding: 0;
+}
+
+.popular-books li {
+    background-color: #ffffff; /* Keep white background for cards */
+    border: 1px solid #ddd; /* Light border */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+}
+
+.popular-books li:hover {
+    transform: translateY(-8px); /* Lift on hover */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.15);
+}
+
+.popular-books a {
+    text-decoration: none;
+    color: #00796b; /* Softer accent color */
+    font-size: 1.3em;
+    font-weight: bold;
+    display: block;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.popular-books a:hover {
+    color: #e74c3c; /* Keep warm red on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .category-list ul,
+    .popular-books ul {
+        grid-template-columns: 1fr; /* Stack items in a single column */
+    }
+
+    .book-list h1 {
+        font-size: 2em; /* Adjust heading size on smaller screens */
+    }
+    
+    .category-list h2,
+    .popular-books h2 {
+        font-size: 1.5em; /* Adjust category and popular books heading size */
+    }
+}
